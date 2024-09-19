@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For IRP</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial Black', sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #a18cd1 100%);
+            color: white;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            animation: fadeIn 2s ease-in-out forwards;
+        }
+
+        h1, p {
+            margin: 0;
+            opacity: 0;
+        }
+
+        h1 {
+            font-size: 60px;
+            animation: slideDown 3s ease-in-out forwards;
+        }
+
+        p {
+            font-size: 24px;
+            margin-top: 20px;
+            animation: fadeInText 3s ease-in-out forwards;
+            animation-delay: 1.5s;
+        }
+
+        .heart {
+            font-size: 200px;
+            color: red;
+            animation: pulse 2s infinite;
+            opacity: 0;
+            animation-delay: 4s;
+            animation-fill-mode: forwards;
+        }
+
+        button {
+            background-color: #ff5f7e;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 30px;
+            font-size: 18px;
+            cursor: pointer;
+            margin-top: 30px;
+            opacity: 0;
+            animation: fadeInButton 2s ease-in-out forwards;
+            animation-delay: 3.5s;
+        }
+
+        /* Animasi */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInText {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+        }
+
+        @keyframes fadeInButton {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1 id="sweetWords">HEWLOOOO My Indra💖</h1>
+        <p id="subText">Thank you for being in my life 💖</p>
+		<p id="subText">keep fighting for your life honey💖</p>
+        <div class="heart" id="heart">❤️</div>
+        <button id="revealButton" onclick="revealLove()" ontouchstart="revealLove()">Pencet :p</button>
+    </div>
+
+    <script>
+        // Fungsi untuk mengganti teks menjadi "I Love You!" dan menunjukkan animasi hati
+        function revealLove() {
+            document.getElementById('sweetWords').innerHTML = "I Loveeee Yuuuuuu!";
+            document.getElementById('subText').innerHTML = "Forever and Always ❤️ <br> hehehe kangenn";
+            document.getElementById('heart').style.opacity = "1";
+        }
+    </script>
+
+</body>
+</html>
